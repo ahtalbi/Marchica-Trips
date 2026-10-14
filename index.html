@@ -5,14 +5,24 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>marchica-trips</title>
-    <style>@import "tailwindcss";</style>
+    <title>Marchica-trips</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div id="app">
-        <h1 class="text-gray-400">Hello world</h1>
-    </div>
+    <header></header>
+    <main>
+        <!-- hero section -->
+        <section class="h-screen flex justify-center items-center flex-col gap-12 p-5 md:flex-row md:p-[5%]">
+            <div class="flex justify-center flex-col gap-6 w-full">
+                <h1 class="text-5xl font-display">Du grand air. <br>Des souvenirs <br>à part.</h1>
+                <h2 class="text-text-muted">Sur l’eau, dans le Rif ou autour d’une table : découvrez Marchica à votre rythme.</h2>
+                <button class="bg-primary p-4 w-full text-bg font-sans font-medium rounded-button hover:bg-sky-700 hover:cursor-pointer transition-colors duration-200 ease-in-out lg:w-[50%]">Découvrir les activités</button>
+            </div>
+            <img class="w-full rounded-card md:w-[50%] h-[60%] object-cover" src="./assets/Marchica.png" alt="">
+        </section>
+    </main>
+    <footer></footer>
 </body>
 
 </html>
