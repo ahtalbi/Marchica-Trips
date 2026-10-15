@@ -10,9 +10,44 @@
 </head>
 
 <body>
-    <header></header>
+    
+<header class="bg-bg border-b border-border">
+    <nav class="flex items-center justify-between px-4 py-3 lg:px-8" aria-label="Navigation principale">
+        <a href="index.html" class="flex items-center gap-2">
+            <img src="./assets/logo.png" alt=""class="w-10 h-10 object-contain">
+            <span class="font-sans font-bold text-text text-sm leading-tight"> marchica <br> trips</span> 
+            </a>
+
+        <details class="relative lg:hidden">
+            <summary class="list-none cursor-pointer border border-border rounded-button w-12 h-12 flex items-center justify-center bg-surface focus-visible:outline-2 focus-visible:outline-focus">
+                <span aria-hidden="true">☰</span>
+                <span class="sr-only">Menu principal</span>
+            </summary>
+            <div class="absolute right-0 top-full mt-2 w-56  bg-surface border border-border rounded-card p-3 shadow-lg z-50 flex flex-col gap-2">
+                <a href="index.html" class="p-2 text-text">Accueil</a>
+                <a href="activities.html" class="p-2 text-text">Activités</a>
+                <a href="activitiesDetails.html" class="p-2 text-text" aria-current="page">Activités Details</a>
+                <a href="faq.html" class="p-2 text-text">FAQ</a>
+                <a href="reserve.html" class="bg-primary text-surface p-3 rounded-button text-center">Réserver</a>
+            </div>
+        </details>
+        <div class="hidden lg:flex items-center gap-8">
+            <a href="index.html" class="text-text hover:text-primary">Accueil</a>
+            <a href="activities.html" class="text-text hover:text-primary">Activités</a>
+            <a href="activitiesDetails.html" class="text-text hover:text-primary" aria-current="page">Activités Details</a>
+            <a href="faq.html" class="text-text hover:text-primary">FAQ</a>
+        </div>
+
+        <!-- Button Desktop -->
+        <a href="reserve.html" class="hidden lg:block bg-primary text-surface  px-6 py-3 rounded-button hover:bg-primary-hover"> Réserver</a>
+    </nav>
+</header>
+
+
+    
     <main>
-        <h1 class="text-gray-400">activities details</h1>
+ 
+
     </main>
     <footer></footer>
 </body>
