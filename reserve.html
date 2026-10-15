@@ -12,8 +12,85 @@
 <body>
     <header></header>
     <main>
-        <h1 class="text-gray-400">reserve</h1>
+        <!-- form + card section -->
+        <section class="h-auto p-8 bg-bg flex flex-col gap-9 lg:p-[7%]">
+            <div class="flex flex-col gap-11">
+                <p class=" text-primary">EXPLORER / 8 EXPÉRIENCES</p>
+                <h1 class="text-5xl font-display">On prépare <br> votre échappée ?</h1>
+                <h2 class="text-text-muted">Sur l’eau, dans le Rif ou autour d’une table : découvrez Marchica à votre rythme.</h2>
+            </div>
+            <div class="flex flex-col gap-x-8 md:flex-row">
+                <form class="flex flex-col gap-4 w-full h-full bg-white rounded-card p-7 border border-gray-600" action="" method="post">
+                    <div class="flex flex-col gap-2">
+                        <legend class="text-4xl font-bold font-display">Votre activite</legend>
+                        <p class="text-text-muted">Les champs marqués d’un * sont obligatoires.</p>
+                    </div>
+                    <label class="text-xl" for="activite">Activite *</label>
+                    <select class="w-full p-3 border border-gray-800 rounded-button" name="activite" id="">
+                        <option value="kayak">kayak</option>
+                        <option value="free divintg">free divintg</option>
+                        <option value="jetski">jetski</option>
+                    </select>
+                    <div class="flex flex-col gap-4 md:flex-row">
+                        <div class="w-full flex flex-col gap-1">
+                            <label class="text-xl" for="date">Date souhaitée *</label>
+                            <input class="w-full p-3 border border-gray-800 rounded-button" placeholder="jj / mm / aaaa" type="datetime" name="date" id="">
+                            <p class="text-text-muted">Selon disponibilités.</p>
+                        </div>
+                        <div class="w-full flex flex-col gap-1">
+                            <label class="text-xl" for="date">Participants *</label>
+                            <input class="w-full p-3 border border-gray-800 rounded-button" placeholder="2" type="datetime" name="date" id="">
+                            <p class="text-text-muted">Au moins 1 participant.</p>
+                        </div>
+                    </div>
+                    <legend class="text-4xl font-bold font-display">Vos coordonnées</legend>
+                    <label class="text-xl" for="">Nom complet *</label>
+                    <input class="w-full p-3 border border-gray-800 rounded-button" name="nom" placeholder="Votre prénom et votre nom" type="text">
+                    <div class="w-full flex flex-col gap-1">
+                        <label class="text-xl" for="email">Adresse e-mail *</label>
+                        <input class="w-full p-3 border border-gray-800 rounded-button" placeholder="vous@exemple.com" type="datetime" name="email" id="">
+                        <p class="text-text-muted">Nous vous répondrons à cette adresse.</p>
+                    </div>
+                    <div class="w-full flex flex-col gap-1">
+                        <label class="text-xl" for="telephone">Téléphone *</label>
+                        <input class="w-full p-3 border border-gray-800 rounded-button" placeholder="+212 …" type="datetime" name="telephone" id="">
+                        <p class="text-text-muted">Ajoutez l’indicatif de votre pays.</p>
+                    </div>
+                    <div class="w-full flex flex-col gap-1">
+                        <label class="text-xl" for="message">Un message ? (facultatif)</label>
+                        <textarea class="w-full p-3 border border-gray-800 rounded-button resize-none" name="message" placeholder="Une question ou un besoin particulier pour votre sortie ?" id="" rows="4"></textarea>
+                    </div>
+                    <p class="text-text-muted">Vos coordonnées servent à traiter votre demande.</p>
+                    <button class="bg-primary p-4 w-full text-bg font-sans font-medium rounded-button hover:bg-sky-700 hover:cursor-pointer transition-colors duration-200 ease-in-out lg:w-[30%]">Envoyer ma demande</button>
+                    <p class="text-text-muted">La demande ne confirme pas la réservation.</p>
+                </form>
+                <div class="w-full h-7 bg-amber-900"></div>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer class="">
+        <div class="bg-primary text-white justify-center align-text-bottom rounded-tl-lg rounded-tr-lg p-2 md:justify-end">
+            <div
+                class="flex h-10px w-10px place-items-start rounded-lg p-2  items-center space-x-2">
+                <img class="object-cover object-center rounded-full h-10 w-10 " src="logo.jpeg" alt="" />
+                <div class="">
+                    <h2 class="text-2xl font-medium tracking-wide leading-10">marchica</h2>
+                    <span class="text-[11px] tracking-[0.25em] text-emerald-100 uppercase block mt-1">TRIPS</span>
+                </div>
+            </div>
+            <div class="flex-1 rounded-lg p-4"> La lagune.Le Rif.Vous</div>
+            <div>
+                <ul class="flex rounded-lg p-4">
+                    <li><a href="activities.html">activities</a>.
+                        <a href="reserve.html">Reservation</a>.
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div
+                class="border-t border-l-amber-50/40 pt-8 mt-6 flex flex-col md:flex-row justify-between items-center text-xs text-emerald-200">
+            </div>
+            <div class="opacity-80 rounded-lg p-2 ">© Marchica Trips.concept pedagogique</div>
+        </div>
+    </footer>
 </body>
 </html>
