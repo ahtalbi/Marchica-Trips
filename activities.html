@@ -14,13 +14,14 @@
         .
 
     </header>
-    <main class=" bg-bg flex flex-col min-h-screen grid grid-cols-1 gap-5 "> 
+    <main class=" bg-bg flex flex-col min-h-screen grid grid-cols-1 gap-5  "> 
         <section class=" mt-10 ml-5" >
             <p class=" text-primary">EXPLORER / 8 EXPÉRIENCES</p>
-            <h1 class="text-text text-5xl mt-10">Votre envie.<br>Votre échappée.</h1>
-            <p class="text-text-muted mt-10  pb-7" >Parlez-nous de votre envie. L’équipe vous contactera pour confirmer les disponibilités et les détails de votre sortie.</p>
+            <h1 class="text-text text-5xl mt-10 font-display" >Votre envie.<br class="md:hidden">Votre échappée.</h1>
+            <p class="text-text-muted mt-10  pb-7" >Kayak, bateau, randonnée ou découvertes gourmandes : trouvez votre prochaine sortie autour de
+Marchica.</p>
         </section>
-        <section class="grid gap-5" >
+        <section class="grid gap-5 md:grid-cols-2 md:grid md:gap-1 lg:grid-cols-4 lg:mx-10" >
         
             <div class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 " >
                 <img src="assets/kayak decouverte.png" alt="kayak on beach" class="row-start-1 row-span-6 w-full h-full object-cover rounded-xl">
@@ -97,12 +98,20 @@
                 <hr class="row-start-12 border-border w-70 justify-self-center">
                 <p class="row-start-13 pl-4 text-xl font-bald text-text" >35 Euro <span class="pl-10 text-text-muted" >/ pers.</span></p>
             </div>
+            <div class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 " >
+                <img src="assets/balde on bataeu.png" alt="balde on bataeu" class="row-start-1 row-span-6 w-full h-full object-cover rounded-xl">
+                <h2 class="row-start-7 pl-4 pt-4 text-text text-2xl pb-5 font-bold"  >balde on bataeu</h2>
+                <p class="text-text-muted row-start-10 pl-4 text-xs ">Des souvenirs à partager</p>
+                <p class="text-text-muted row-start-11 pl-4 text-xs" >2 h 30 · Sortie accompagnée</p>
+                <hr class="row-start-12 border-border w-70 justify-self-center">
+                <p class="row-start-13 pl-4 text-xl font-bald text-text" >20 Euro <span class="pl-10 text-text-muted" >/ pers.</span></p>
+            </div>
             
         </section>
         
-        <div class="grid grid-cols-1  bg-primary rounded-2xl p-6 mx-auto gap-8 ">
-            <p class="text-primary-soft  font-display text-3xl">Et si votre prochaine <br> échappée était ici ?</p>
-            <a href="/reserve.html" class=" bg-surface rounded-2xl h-12 flex items-center justify-center border border-primary text-primary font-bold">Préparer ma sortie</a>
+        <div class="grid grid-cols-1  bg-primary rounded-2xl p-6 mx-auto gap-8 md:flex  md:pb-15 md:m-20 md:flex md:justify-between ">
+            <p class="text-surface  font-display text-3xl flex items-center">Et si votre prochaine <br> échappée était ici ?</p>
+            <a href="/reserve.html" class=" bg-surface rounded-2xl h-12 flex items-center justify-center border border-primary text-primary font-bold hover:ring-2 ring-focus md:my-8 md:px-4 lg:items-center lg:mr-10 lg:mt-10">Préparer ma sortie</a>
         </div>
     </main>
     <footer>
