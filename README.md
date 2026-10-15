@@ -87,4 +87,4 @@ Paste the links below.
 | Tool      | Link                                                                                                      |
 | --------- | --------------------------------------------------------------------------------------------------------- |
 | **Figma** | [Figma](https://www.figma.com/design/7XsQtxkD3an5o10hM34vwd/MT--Copy-?node-id=9-325&t=0BWCSx4NdZvVxnql-1) |
-| **Jira**  | [Paste the Jira link here](https://claude.ai/chat/b376176d-212a-47bb-8c70-d67389c42a4b#)                  |
+| **Jira**  | [Paste the Jira link here](https://obetoxteam.atlassian.net/jira/software/projects/MTR/boards/12/backlog)                  |
