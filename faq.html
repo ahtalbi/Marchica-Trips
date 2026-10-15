@@ -2,44 +2,203 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>marchica-trips</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>marchica-trips</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header></header>
-    <main>
-        <h1 class="text-gray-400">FAQ</h1>
-    </main>
-    <footer >
-        <div class="bg-primary text-white justify-center align-text-bottom rounded-lg p-2 md:justify-end">
-            <div class="flex h-10px w-10px place-items-start overflow-x-scroll rounded-lg p-2 lg:overflow-visible  items-center space-x-2">
-        <img
-          class="object-cover object-center rounded-full h-10 w-10 "
-          src="logo.jpeg" alt=""/>
-          <div class="">
-            <h2 class="text-2xl font-medium tracking-wide leading-10">marchica</h2>
-            <span class="text-[11px] tracking-[0.25em] text-emerald-100 uppercase block mt-1">TRIPS</span>
-          </div>
-    
-        </div >
+  <header></header>
+  <main>
+    <div class="relative w-full h-350px md:h-420px  overflow-hidden shadow-lg my-6">
 
-                <div class="flex-1  rounded-lg p-4"> La lagune.Le Rif.Vous</div>
-        <div>
-            <ul class="flex  rounded-lg p-4">
-                <li ><a href="activities.html">activities</a>.
-                 <a href="reserve.html">Reservation</a>.
-                  <li><a href="faq.html">FAQ</a></li>
-            </ul>
+      <img src="faq.jpeg" alt="faq-machica-trips" class="w-full h-full object-cover" />
+
+
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div class="absolute inset-0 flex flex-col justify-center px-8 md:px-12 lg:px-16 text-white space-y-3">
+
+
+        <span class="font-serif text-2xl md:text-2xl lg:text-3xl font-bold">
+          BIEN PRÉPARER / QUESTIONS FRÉQUENTES
+        </span>
+
+
+        <h1 class="text-xs md:text-sm font-semibold tracking-widest uppercase text-white">
+          L'esprit libre, avant de partir.
+        </h1>
+
+        <p class="text-sm md:text-base text-bg max-w-xl">
+          Tout ce que vous devez savoir avant votre aventure à Marchica.
+        </p>
+
+      </div>
+    </div>
+    <!-- premier QUESTIONS -->
+    <div class="max-w-3xl mx-auto">
+
+      <div class="border-2 rounded-2xl p-4 border-primary-soft m-6">
+        <details class="group cursor-pointer">
+          <summary class="list-none flex justify-between items-center font-bold text-primary">
+            <span>Comment réserver une activité ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180">+</span>
+          </summary>
+
+          <p class="mt-3 text-gray-600">
+            Choisissez votre activité puis envoyez le formulaire de demande.
+            L’équipe vous contactera pour confirmer la date, les disponibilités et les modalités.
+          </p>
+        </details>
+      </div>
+      <!-- deuxieme QUESTIONS -->
+      <div class="max-w-3xl mx-auto">
+
+        <div class="border-2 rounded-2xl p-4 border-primary-soft m-6">
+          <details class="group cursor-pointer">
+            <summary class="list-none flex justify-between items-center font-bold text-primary">
+              <span>La réservation est-elle confirmée immédiatement ?</span>
+              <span class="transition-transform duration-300 group-open:rotate-180">+</span>
+            </summary>
+
+            <p class="mt-3 text-gray-600">
+              Oui. Dès que vous validez votre réservation et que le paiement est accepté,
+              vous recevez instantanément un email de confirmation avec tous les détails
+              (lieu de rendez-vous, heure, contact du guide…).
+            </p>
+          </details>
         </div>
-        <div class="border-t border-l-amber-50/40 pt-8 mt-6 flex flex-col md:flex-row justify-between items-center text-xs text-emerald-200"></div>
+        <!-- troisieme QUESTIONS -->
+        <div class="max-w-3xl mx-auto">
 
-        <div class="opacity-80 rounded-lg p-2 ">© Marchica Trips.concept pedagogique</div>
+          <div class="border-2 rounded-2xl p-4 border-primary-soft m-6">
+            <details class="group cursor-pointer">
+              <summary class="list-none flex justify-between items-center font-bold text-primary">
+                <span>Faut-il savoir nager pour faire du kayak ?</span>
+                <span class="transition-transform duration-300 group-open:rotate-180">+</span>
+              </summary>
+
+              <p class="mt-3 text-gray-600">
+                Non, ce n’est pas obligatoire.
+                Nous fournissons des gilets de sauvetage pour tout le monde et nos guides restent toujours à proximité.
+                Cependant, se sentir à l’aise dans l’eau est un plus.
+              </p>
+            </details>
           </div>
-    </footer>
+          <!-- quatreieme QUESTIONS -->
+          <div class="max-w-3xl mx-auto">
+
+            <div class="border-2 rounded-2xl p-4 border-primary-soft m-6">
+              <details class="group cursor-pointer">
+                <summary class="list-none flex justify-between items-center font-bold text-primary">
+                  <span>Que dois-je prévoir pour ma sortie ?</span>
+                  <span class="transition-transform duration-300 group-open:rotate-180">+</span>
+                </summary>
+
+                <p class="mt-3 text-gray-600">
+                <ul class="list-disc">
+                  <li>Crème solaire</li>
+                  <li>Lunettes de soleil et chapeau</li>
+                  <li>Serviette</li>
+                  <li>Vêtements confortables (et une tenue de rechange pour les activités nautiques)</li>
+                  <li>Bouteille d’eau</li>
+                  <li>Bonne humeur !</li>
+                </ul>
+                </p>
+              </details>
+            </div>
+            <!-- cinquiem QUESTIONS -->
+            <div class="max-w-3xl mx-auto">
+
+              <div class="border-2 rounded-2xl p-4 border-primary-soft m-6">
+                <details class="group cursor-pointer">
+                  <summary class="list-none flex justify-between items-center font-bold text-primary">
+                    <span>Les activités conviennent-elles aux enfants ?</span>
+                    <span class="transition-transform duration-300 group-open:rotate-180">+</span>
+                  </summary>
+
+                  <p class="mt-3 text-gray-600">
+                    Oui. La plupart de nos activités sont adaptées aux enfants à partir de 8 ans (kayak,
+                    balade en bateau, randonnée douce). Les enfants doivent toujours être accompagnés d’un adulte.
+                    N’hésitez pas à nous indiquer l’âge des enfants lors de la réservation.
+                  </p>
+                </details>
+              </div>
+              <!-- sixieme QUESTIONS -->
+              <div class="max-w-3xl mx-auto">
+
+                <div class="border-2 rounded-2xl p-4 border-primary-soft m-6">
+                  <details class="group cursor-pointer">
+                    <summary class="list-none flex justify-between items-center font-bold text-primary">
+                      <span>Et si la météo change ?</span>
+                      <span class="transition-transform duration-300 group-open:rotate-180">+</span>
+                    </summary>
+
+                    <p class="mt-3 text-gray-600">
+                      En cas de mauvais temps (vent fort, pluie importante), nous vous proposons soit de reporter
+                      l’activité à une autre date,
+                      soit de vous rembourser intégralement. Vous serez prévenu le plus tôt possible.
+                    </p>
+                  </details>
+                </div>
+                <!-- siptieme QUESTIONS -->
+                <div class="max-w-3xl mx-auto">
+                  <div class="border-2 rounded-2xl p-4 border-primary-soft m-6">
+                    <details class="group cursor-pointer">
+                      <summary class="list-none flex justify-between items-center font-bold text-primary">
+                        <span>Comment modifier ou annuler ma demande ?</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">+</span>
+                      </summary>
+
+                      <p class="mt-3 text-gray-600">
+                        Vous pouvez modifier ou annuler votre réservation gratuitement jusqu’à 24 heures avant le début
+                        de l’activité.
+                        Il suffit de nous écrire par email ou WhatsApp avec votre numéro de réservation.
+                        Au-delà de 24h, des frais peuvent s’appliquer.
+                      </p>
+                    </details>
+                  </div>
+                  <div class="max-w-3xl mx-auto">
+                    <div
+                      class="border-2 rounded-2xl p-4 text-white border-primary-soft m-6 bg-primary-hover text-center">
+                      <a href="reserve.html">Contacter l’équipe</a>
+                    </div>
+                    <div class=" p-4 text-center"> Vous n’avez pas trouvé votre réponse ?<h3 class=" font-black"><a
+                          href="reserve.html">Contacter l’équipe</a>
+                      </h3>
+                    </div>
+
+
+
+
+
+  </main>
+  <footer>
+    <div class="bg-primary text-white justify-center align-text-bottom p-2 md:flex-row md:p-[5%]">
+      <div class="flex h-10px w-10px place-items-start  rounded-lg p-2  items-center space-x-2">
+        <img class="object-cover object-center rounded-full h-10 w-10 " src="logo.jpeg" alt="logo-machica-trips" />
+        <div>
+          <h2 class="text-2xl font-medium tracking-wide leading-10">marchica</h2>
+          <span class="text-[11px] tracking-[0.25em] text-emerald-100 uppercase block mt-1">TRIPS</span>
+        </div>
+
+      </div>
+
+      <div class="flex-1  rounded-lg p-4"> La lagune.Le Rif.Vous</div>
+      <div>
+        <ul class="flex  rounded-lg p-4 ">
+          <li><a href="activities.html">activities</a>.
+            <a href="reserve.html">Reservation</a>.
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <hr>
+
+      <div class="opacity-80 rounded-lg p-2 ">© Marchica Trips.concept pedagogique</div>
+    </div>
+  </footer>
 </body>
 
 </html>
