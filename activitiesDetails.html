@@ -42,64 +42,92 @@
 </header>
 
 <main class="bg-bg min-h-screen">
-    <section class="w-full max-w-3xl mx-auto px-4 py-6">
-        <h1 class="font-display text-h2 text-text mb-4">La lagune, <br>au fil de l'eau.</h1>
+    <!--
+        DESKTOP VERSION (changes only apply from the `lg:` breakpoint, so mobile stays exactly the same):
+        1. Hero section: container widened (max-w-3xl -> lg:max-w-6xl).
+        2. Hero images: laid out with CSS grid (1 column on mobile, 3 columns on desktop), like the Figma:
+           the big photo takes 2 columns, the two small photos are stacked in the 3rd column.
+        3. Content section: also CSS grid (1 column on mobile, 3 columns on desktop: 2 for content + 1 for the card):
+           left (2/3) = "Une parenthèse sur l'eau" + "Le programme" (wrapped in one div),
+           right (1/3) = a small price card (180 MAD + "Réserver cette sortie" button) as in the Figma.
+           The price card is new content taken from the Figma: delete the <aside> if you don't want it.
+        Nothing else was changed.
+    -->
+    <section class="w-full max-w-3xl lg:max-w-6xl mx-auto px-4 py-6 ">
+        <h1 class="font-display text-h2 text-text mb-4">La lagune, <br class="lg:hidden">au fil de l'eau.</h1>
         <div class="flex items-center gap-4 mb-6">
             <span class="bg-primary-soft text-text text-caption font-bold px-4 py-1 rounded-full">KAYAK DÉCOUVERTE</span>
             <span class="font-sans text-caption text-text-muted">1 h 30 </span>
         </div>
-        <div class="flex flex-col gap-4">
-            <img src="./assets/hero1.webp" alt="Personnes faisant du kayak sur la lagune de Marchica" class="w-full aspect-[16/10] object-cover rounded-card">
-            <div class="grid grid-cols-2 gap-4">
-                <img src="./assets/hero2.webp" alt="Vue panoramique de la lagune de Marchica" class="w-full aspect-[4/3] object-cover rounded-card">
-                <img src="./assets/hero3.webp" alt="Vue du port et des bateaux sur la lagune" class="w-full aspect-[4/3] object-cover rounded-card">
+        <!-- desktop: 3 columns grid -->
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+            <!-- desktop: big image spans 2 columns and fills the height of the 2 small ones -->
+            <img src="./assets/hero1.webp" alt="Personnes faisant du kayak sur la lagune de Marchica" class="w-full aspect-[16/10] object-cover rounded-card lg:col-span-2 lg:h-full lg:aspect-auto">
+            <!-- desktop: small images stacked in 1 column -->
+            <div class="grid grid-cols-2 gap-4 lg:grid-cols-1">
+                <img src="./assets/hero2.webp" alt="Vue panoramique de la lagune de Marchica" class="w-full aspect-[4/3] object-cover rounded-card lg:aspect-[16/10]">
+                <img src="./assets/hero3.webp" alt="Vue du port et des bateaux sur la lagune" class="w-full aspect-[4/3] object-cover rounded-card lg:aspect-[16/10]">
             </div>
         </div>
     </section>
 
-<section class="w-full max-w-3xl mx-auto px-4 py-6">
+<!-- desktop: wider container + 2 columns (content on the left, price card on the right) -->
+<section class="w-full max-w-3xl lg:max-w-6xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-3 lg:gap-8 lg:items-start">
 
-    <div class="mb-10">
-        <h2 class="font-display text-h3 text-text mb-4">Une parenthèse sur l'eau</h2>
+    <!-- left column (wrapper added so both blocks stay together) -->
+    <div class="lg:col-span-2">
+        <div class="mb-10">
+            <h2 class="font-display text-h3 text-text mb-4">Une parenthèse sur l'eau</h2>
 
-        <p class="font-sans text-body text-text-muted">
-            Pagayez à votre rythme et prenez le temps de
-            regarder la lagune autrement. Une expérience
-            pour ralentir, respirer et profiter de l’horizon.
-        </p>
+            <p class="font-sans text-body text-text-muted">
+                Pagayez à votre rythme et prenez le temps de
+                regarder la lagune autrement. Une expérience
+                pour ralentir, respirer et profiter de l’horizon.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="font-display text-h3 text-text mb-6">Le programme</h2>
+
+            <ol class="flex flex-col gap-6">
+
+                <li class="flex items-start gap-4">
+                    <span class="bg-primary-soft text-text rounded-full w-10 h-10 flex items-center justify-center shrink-0">1</span>
+
+                    <div>
+                        <h3 class="font-sans font-bold text-text mb-2">On se retrouve</h3>
+                        <p class="font-sans text-caption text-text-muted">Accueil des participants, présentation du matériel et briefing sur les consignes de sécurité.</p>
+                    </div>
+                </li>
+
+                <li class="flex items-start gap-4">
+                    <span class="bg-primary-soft text-text rounded-full w-10 h-10 flex items-center justify-center shrink-0">2</span>
+                    <div>
+                        <h3 class="font-sans font-bold text-text mb-2">On prend le large</h3>
+                        <p class="font-sans text-caption text-text-muted">Tenue confortable, protection solaire et eau. Équipement à confirmer avec l'équipe.</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="bg-primary-soft text-text rounded-full w-10 h-10 flex items-center justify-center shrink-0">3</span>
+
+                    <div>
+                        <h3 class="font-sans font-bold text-text mb-2"> On prolonge le souvenir</h3>
+                        <p class="font-sans text-caption text-text-muted">Profitez des paysages, admirez la nature environnante et revenez tranquillement au point de départ.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
     </div>
 
-    <div>
-        <h2 class="font-display text-h3 text-text mb-6">Le programme</h2>
-
-        <ol class="flex flex-col gap-6">
-
-            <li class="flex items-start gap-4">
-                <span class="bg-primary-soft text-text rounded-full w-10 h-10 flex items-center justify-center shrink-0">1</span>
-
-                <div>
-                    <h3 class="font-sans font-bold text-text mb-2">On se retrouve</h3>
-                    <p class="font-sans text-caption text-text-muted">Accueil des participants, présentation du matériel et briefing sur les consignes de sécurité.</p>
-                </div>
-            </li>
-
-            <li class="flex items-start gap-4">
-                <span class="bg-primary-soft text-text rounded-full w-10 h-10 flex items-center justify-center shrink-0">2</span>
-                <div>
-                    <h3 class="font-sans font-bold text-text mb-2">On prend le large</h3>
-                    <p class="font-sans text-caption text-text-muted">Tenue confortable, protection solaire et eau. Équipement à confirmer avec l'équipe.</p>
-                </div>
-            </li>
-            <li class="flex items-start gap-4">
-                <span class="bg-primary-soft text-text rounded-full w-10 h-10 flex items-center justify-center shrink-0">3</span>
-
-                <div>
-                    <h3 class="font-sans font-bold text-text mb-2"> On prolonge le souvenir</h3>
-                    <p class="font-sans text-caption text-text-muted">Profitez des paysages, admirez la nature environnante et revenez tranquillement au point de départ.</p>
-                </div>
-            </li>
-        </ol>
-    </div>
+    <!-- right column (desktop only): price card from the Figma, stays visible while scrolling -->
+    <aside class="hidden lg:block bg-surface border border-border rounded-card p-6 sticky top-6">
+        <span class="font-sans text-caption text-text-muted uppercase">Kayak découverte</span>
+        <p class="font-display text-h3 text-text mt-2">180 MAD</p>
+        <p class="font-sans text-caption text-text-muted mb-4">par personne</p>
+        <p class="font-sans text-caption text-text-muted mb-4">1 h 30 · Sur l'eau</p>
+        <a href="reserve" class="block bg-primary text-surface p-3 rounded-button text-center hover:bg-primary-hover">Réserver cette sortie</a>
+        <p class="font-sans text-caption text-text-muted mt-3">Disponibilités à confirmer par l'équipe.</p>
+    </aside>
 </section>
 </main>
     <footer>

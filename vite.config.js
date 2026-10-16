@@ -13,6 +13,7 @@ export default defineConfig({
         activities: resolve(import.meta.dirname, 'activities.html'),
         faq: resolve(import.meta.dirname, 'faq.html'),
         reserve: resolve(import.meta.dirname, 'reserve.html'),
+        activitiesDetails: resolve(import.meta.dirname, 'activitiesDetails.html'),
       },
     },
   },
