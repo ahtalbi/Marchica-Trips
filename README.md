@@ -66,10 +66,10 @@ Everyone designed their own part in **Figma** and then built it in code.
 
 |Member|Work|
 |---|---|
-|**Ismail**|Activities Détail and navigation bar|
-|**Achraf**|Activities page|
+|**Ismail Lemkadmi**|Activities Détail and navigation bar|
+|**Achraf Cherdal**|Activities page|
 |**Ahmed Talbi**|Accueil (Home) page and Réservation page|
-|**Fatima**|Footer and FAQ page|
+|**Fatima benddri**|Footer and FAQ page|
 
 ## Project Management (Jira)
 
