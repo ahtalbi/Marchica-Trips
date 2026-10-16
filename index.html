@@ -10,16 +10,44 @@
 </head>
 
 <body>
-    <header></header>
+    <header class="bg-bg border-b border-border">
+    <nav class="flex items-center justify-between px-4 py-3 lg:px-8" aria-label="Navigation principale">
+        <a href="index" class="flex items-center gap-2">
+            <img src="./assets/logo.webp" alt="logo" class="w-10 h-10 object-contain">
+            <span class="font-sans font-bold text-text text-sm leading-tight"> marchica <br> trips</span> 
+            </a>
+
+        <details class="relative lg:hidden">
+            <summary class="list-none cursor-pointer border border-border rounded-button w-12 h-12 flex items-center justify-center bg-surface focus-visible:outline-2 focus-visible:outline-focus">
+                <span aria-hidden="true">☰</span>
+                <span class="sr-only">Menu principal</span>
+            </summary>
+            <div class="absolute right-0 top-full mt-2 w-56  bg-surface border border-border rounded-card p-3 shadow-lg z-50 flex flex-col gap-2">
+                <a href="index" class="p-2 text-text">Accueil</a>
+                <a href="activities" class="p-2 text-text" >Activités</a>
+                <a href="activitiesDetails" class="p-2 text-text" aria-current="page">Activités Details</a>
+                <a href="faq" class="p-2 text-text">FAQ</a>
+                <a href="reserve" class="bg-primary text-surface p-3 rounded-button text-center">Réserver</a>
+            </div>
+        </details>
+        <div class="hidden lg:flex items-center gap-8">
+            <a href="index" class="text-text hover:text-primary border-b-2 border-focus" aria-current="page">Accueil</a>
+            <a href="activities" class="text-text hover:text-primary">Activités</a>
+            <a href="activitiesDetails" class="text-text hover:text-primary" >Activités Details</a>
+            <a href="faq" class="text-text hover:text-primary">FAQ</a>
+        </div>
+        <a href="reserve" class="hidden lg:block bg-primary text-surface  px-6 py-3 rounded-button hover:bg-primary-hover" > Réserver</a>
+    </nav>
+</header>
     <main class="">
         <!-- hero section -->
-        <section class="h-[70vh] flex justify-center items-center flex-col gap-12 p-5 md:flex-row md:p-[5%]">
+        <section class="h-[90vh] flex justify-center items-center flex-col gap-12 p-5 lg:flex-row md:p-[5%]">
             <div class="flex justify-center flex-col gap-6 w-full">
                 <h1 class="text-5xl font-display">Du grand air. <br>Des souvenirs <br>à part.</h1>
                 <h2 class="text-text-muted">Sur l’eau, dans le Rif ou autour d’une table : découvrez Marchica à votre rythme.</h2>
                 <button class="bg-primary p-4 w-full text-bg font-sans font-medium rounded-button hover:bg-sky-700 hover:cursor-pointer transition-colors duration-200 ease-in-out lg:w-[50%]">Découvrir les activités</button>
             </div>
-            <img class="w-full rounded-card object-cover md:w-[90%] h-[90%]" src="./assets/Marchica.webp" alt="">
+            <img class="w-full rounded-card object-cover md:w-[90%] h-[90%]" src="./assets/Marchica.webp" alt="marchica photo">
         </section>
 
 
@@ -68,7 +96,7 @@
             </div>
         </section>
 
-        <section class="h-[70vh] flex content-center items-center p-5 w-full md:p-[5%] md:h-[50vh] ">
+        <section class="h-[90vh] flex content-center items-center p-5 w-full md:p-[5%] md:h-[50vh] ">
             <div class="flex justify-center flex-col gap-6 w-full">
                 <h1 class="text-5xl font-display">Paroles Des Voyaguers</h1>
                 <h2 class="text-text-muted">Avis fictifs · exemples de contenu pour la maquette</h2>
@@ -87,15 +115,39 @@
             </div>
         </section>
 
-        <section class="w-[90%]  grid grid-cols-1  bg-primary rounded-2xl p-6 mx-auto gap-8 md:flex  md:pb-15 md:m-20 md:flex md:justify-between md:my-0 ">
-            <p class="text-surface  font-display text-3xl flex items-center">Et si votre prochaine <br> échappée était ici ?</p>
-            <a href="/reserve.html" class=" bg-surface rounded-2xl h-12 flex items-center justify-center border border-primary text-primary font-bold hover:ring-2 ring-focus md:my-8 md:px-4 lg:items-center lg:mr-10 lg:mt-10">Préparer ma sortie</a>
+        <section class="w-full flex justify-center">
+            <div class="w-[90%] grid grid-cols-1  bg-primary rounded-2xl p-6 gap-8 md:pb-15 md:m-20 md:flex md:justify-between md:my-0 ">
+                <p class="text-surface  font-display text-3xl flex items-center">Et si votre prochaine <br> échappée était ici ?</p>
+                <a href="/reserve.html" class=" bg-surface rounded-2xl h-12 flex items-center justify-center border border-primary text-primary font-bold hover:ring-2 ring-focus md:my-8 md:px-4 lg:items-center lg:mr-10 lg:mt-10">Préparer ma sortie</a>
+            </div>
         </section>
     </main>
 
-    <footer class="mt-9">
 
-    </footer>
+    <footer>
+    <div class="bg-primary text-white justify-center align-text-bottom p-2 mt-9 md:flex-row md:p-[5%]">
+      <div class="flex h-10px w-10px place-items-start  rounded-lg p-2  items-center space-x-2">
+        <img class="object-cover object-center rounded-full h-10 w-10 " src="logo.webp" alt="logo-machica-trips" />
+        <div>
+          <h2 class="text-2xl font-medium tracking-wide leading-10">marchica</h2>
+          <span class="text-[11px] tracking-[0.25em] text-emerald-100 uppercase block mt-1">TRIPS</span>
+        </div>
+
+      </div>
+
+      <div class="flex-1  rounded-lg p-4"> La lagune.Le Rif.Vous</div>
+      <div>
+        <ul class="flex  rounded-lg p-4 ">
+          <li><a href="activities">activities</a>.
+            <a href="reserve">Reservation</a>.
+          <li><a href="faq">FAQ</a></li>
+        </ul>
+      </div>
+      <hr>
+
+      <div class="opacity-80 rounded-lg p-2 ">© Marchica Trips.concept pedagogique</div>
+    </div>
+  </footer>
 </body>
 
 </html>

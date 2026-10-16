@@ -10,20 +10,45 @@
 </head>
 
 <body>
-    <header>
-        .
+    <header class="bg-bg border-b border-border">
+    <nav class="flex items-center justify-between px-4 py-3 lg:px-8" aria-label="Navigation principale">
+        <a href="index" class="flex items-center gap-2">
+            <img src="./assets/logo.webp" alt="logo" class="w-10 h-10 object-contain">
+            <span class="font-sans font-bold text-text text-sm leading-tight"> marchica <br> trips</span> 
+            </a>
 
-    </header>
-    <main class=" bg-bg flex flex-col min-h-screen grid grid-cols-1 gap-5  "> 
+        <details class="relative lg:hidden">
+            <summary class="list-none cursor-pointer border border-border rounded-button w-12 h-12 flex items-center justify-center bg-surface focus-visible:outline-2 focus-visible:outline-focus">
+                <span aria-hidden="true">☰</span>
+                <span class="sr-only">Menu principal</span>
+            </summary>
+            <div class="absolute right-0 top-full mt-2 w-56  bg-surface border border-border rounded-card p-3 shadow-lg z-50 flex flex-col gap-2">
+                <a href="index" class="p-2 text-text">Accueil</a>
+                <a href="activities" class="p-2 text-text  border-b-2 border-focus " aria-current="page" >Activités</a>
+                <a href="activitiesDetails" class="p-2 text-text" >Activités Details</a>
+                <a href="faq" class="p-2 text-text">FAQ</a>
+                <a href="reserve" class="bg-primary text-surface p-3 rounded-button text-center">Réserver</a>
+            </div>
+        </details>
+        <div class="hidden lg:flex items-center gap-8">
+            <a href="index" class="text-text hover:text-primary">Accueil</a>
+            <a href="activities" class="text-text hover:text-primary border-b-2 border-focus">Activités</a>
+            <a href="activitiesDetails" class="text-text hover:text-primary" aria-current="page">Activités Details</a>
+            <a href="faq" class="text-text hover:text-primary">FAQ</a>
+        </div>
+        <a href="reserve" class="hidden lg:block bg-primary text-surface  px-6 py-3 rounded-button hover:bg-primary-hover"> Réserver</a>
+    </nav>
+</header>
+    <main class=" bg-bg min-h-screen grid grid-cols-1 gap-5  "> 
         <section class=" mt-10 ml-5" >
             <p class=" text-primary">EXPLORER / 8 EXPÉRIENCES</p>
             <h1 class="text-text text-5xl mt-10 font-display" >Votre envie.<br class="md:hidden">Votre échappée.</h1>
             <p class="text-text-muted mt-10  pb-7" >Kayak, bateau, randonnée ou découvertes gourmandes : trouvez votre prochaine sortie autour de
 Marchica.</p>
         </section>
-        <section class="grid gap-5 md:grid-cols-2 md:grid md:gap-1 lg:grid-cols-4 lg:mx-10" >
+                <section class="grid gap-5 md:grid-cols-[repeat(2,1fr)] md:grid md:gap-1 lg:grid-cols-[repeat(4,1fr)] lg:mx-10 lg:gap-4" >
         
-            <div class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 " >
+            <div tabindex="0" class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-border" >
                 <img src="assets/kayak decouverte.webp" alt="kayak on beach" class="row-start-1 row-span-6 w-full h-full object-cover rounded-xl">
                 <h2 class="row-start-7 pl-4 pt-4 text-text text-2xl pb-5 font-bold"  >Kayak découverte</h2>
                 <p class="text-text-muted row-start-10 pl-4 text-xs ">Sur la lagune de Marchica</p>
@@ -34,7 +59,7 @@ Marchica.</p>
 
 
 
-            <div class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 " >
+            <div tabindex="0" class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-border" >
                 <img src="assets/balde on bataeu.webp" alt="balqde en bateu" class="row-start-1 row-span-6 w-full h-full object-cover rounded-xl">
                 <h2 class="row-start-7 pl-4 pt-4 text-text text-2xl pb-5 font-bold"  >Balade en bateau</h2>
                 <p class="text-text-muted row-start-10 pl-4 text-xs ">La lagune, autrement</p>
@@ -46,7 +71,7 @@ Marchica.</p>
 
 
 
-            <div class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 " >
+            <div tabindex="0" class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid  grid-rows-14 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-border" >
                 <img src="assets/Randonnée au Gourougou.webp" alt="Randonnée au Gourougou" class="row-start-1 row-span-6 w-full h-full object-cover rounded-xl">
                 <h2 class="row-start-7  pt-4 text-text text-2xl pb-5 font-bold "  >Randonnée au Gourougou</h2>
                 <p class="text-text-muted row-start-10 pl-4 text-xs  ">Prendre de la hauteur</p>
@@ -57,7 +82,7 @@ Marchica.</p>
 
 
 
-            <div class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 " >
+            <div tabindex="0" class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid  grid-rows-14 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-border" >
                 <img src="assets/Escapade gourmande.webp" alt="Escapade gourmande" class="row-start-1 row-span-6 w-full h-full object-cover rounded-xl">
                 <h2 class="row-start-7 pl-4 pt-4 text-text text-2xl pb-5 font-bold"  >Escapade gourmande</h2>
                 <p class="text-text-muted row-start-10 pl-4 text-xs ">Les saveurs de Nador</p>
@@ -68,7 +93,7 @@ Marchica.</p>
 
 
 
-            <div class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 " >
+            <div tabindex="0" class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-border" >
                 <img src="assets/kayak decouverte.webp" alt="Kayak au crépuscule" class="row-start-1 row-span-6 w-full h-full object-cover rounded-xl">
                 <h2 class="row-start-7 pl-4 pt-4 text-text text-2xl pb-5 font-bold"  >Kayak au crépuscule</h2>
                 <p class="text-text-muted row-start-10 pl-4 text-xs ">Une parenthèse dorée</p>
@@ -79,7 +104,7 @@ Marchica.</p>
 
 
 
-            <div class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 " >
+            <div tabindex="0" class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-border" >
                 <img src="assets/balade sur le littoral.webp" alt="Balade sur le littoral" class="row-start-1 row-span-6 w-full h-full object-cover rounded-xl">
                 <h2 class="row-start-7 pl-4 pt-4 text-text text-2xl pb-5 font-bold"  >Balade sur le littoral</h2>
                 <p class="text-text-muted row-start-10 pl-4 text-xs ">Au rythme de la côte</p>
@@ -90,7 +115,7 @@ Marchica.</p>
 
 
 
-            <div class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 " >
+            <div tabindex="0" class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-border" >
                 <img src="assets/cuisine rifaine.webp" alt="Cuisine rifaine" class="row-start-1 row-span-6 w-full h-full object-cover rounded-xl">
                 <h2 class="row-start-7 pl-4 pt-4 text-text text-2xl pb-5 font-bold"  >Cuisine rifaine</h2>
                 <p class="text-text-muted row-start-10 pl-4 text-xs ">Un moment à savourer</p>
@@ -98,7 +123,7 @@ Marchica.</p>
                 <hr class="row-start-12 border-border w-70 justify-self-center">
                 <p class="row-start-13 pl-4 text-xl font-bald text-text" >35 Euro <span class="pl-10 text-text-muted" >/ pers.</span></p>
             </div>
-            <div class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 " >
+            <div tabindex="0" class="bg-surface w-full max-w-84 h-[354px]  mx-auto border-2 border-border rounded-2xl grid grid-cols- grid-rows-14 p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-border" >
                 <img src="assets/balde on bataeu.webp" alt="balde on bataeu" class="row-start-1 row-span-6 w-full h-full object-cover rounded-xl">
                 <h2 class="row-start-7 pl-4 pt-4 text-text text-2xl pb-5 font-bold"  >balde on bataeu</h2>
                 <p class="text-text-muted row-start-10 pl-4 text-xs ">Des souvenirs à partager</p>
@@ -111,11 +136,33 @@ Marchica.</p>
         
         <div class="grid grid-cols-1  bg-primary rounded-2xl p-6 mx-auto gap-8 md:flex  md:pb-15 md:m-20 md:flex md:justify-between ">
             <p class="text-surface  font-display text-3xl flex items-center">Et si votre prochaine <br> échappée était ici ?</p>
-            <a href="/reserve.html" class=" bg-surface rounded-2xl h-12 flex items-center justify-center border border-primary text-primary font-bold hover:ring-2 ring-focus md:my-8 md:px-4 lg:items-center lg:mr-10 lg:mt-10">Préparer ma sortie</a>
+            <a href="reserve" class=" bg-surface rounded-2xl h-12 flex items-center justify-center border border-primary text-primary font-bold hover:ring-2 ring-focus md:my-8 md:px-4 lg:items-center lg:mr-10 lg:mt-10">Préparer ma sortie</a>
         </div>
     </main>
     <footer>
-    </footer>
+    <div class="bg-primary text-white justify-center align-text-bottom p-2 md:flex-row md:p-[5%]">
+      <div class="flex h-10px w-10px place-items-start  rounded-lg p-2  items-center space-x-2">
+        <img class="object-cover object-center rounded-full h-10 w-10 " src="logo.webp" alt="logo-machica-trips" />
+        <div>
+          <h2 class="text-2xl font-medium tracking-wide leading-10">marchica</h2>
+          <span class="text-[11px] tracking-[0.25em] text-emerald-100 uppercase block mt-1">TRIPS</span>
+        </div>
+
+      </div>
+
+      <div class="flex-1  rounded-lg p-4"> La lagune.Le Rif.Vous</div>
+      <div>
+        <ul class="flex  rounded-lg p-4 ">
+          <li><a href="activities">activities</a>.
+            <a href="reserve">Reservation</a>.
+          <li><a href="faq">FAQ</a></li>
+        </ul>
+      </div>
+      <hr>
+
+      <div class="opacity-80 rounded-lg p-2 ">© Marchica Trips.concept pedagogique</div>
+    </div>
+  </footer>
     
 </body>
 
