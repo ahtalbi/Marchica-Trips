@@ -10,7 +10,35 @@
 </head>
 
 <body>
-    <header></header>
+        <header class="bg-bg border-b border-border">
+    <nav class="flex items-center justify-between px-4 py-3 lg:px-8" aria-label="Navigation principale">
+        <a href="index" class="flex items-center gap-2">
+            <img src="./assets/logo.webp" alt="logo" class="w-10 h-10 object-contain">
+            <span class="font-sans font-bold text-text text-sm leading-tight"> marchica <br> trips</span> 
+            </a>
+
+        <details class="relative lg:hidden">
+            <summary class="list-none cursor-pointer border border-border rounded-button w-12 h-12 flex items-center justify-center bg-surface focus-visible:outline-2 focus-visible:outline-focus">
+                <span aria-hidden="true">☰</span>
+                <span class="sr-only">Menu principal</span>
+            </summary>
+            <div class="absolute right-0 top-full mt-2 w-56  bg-surface border border-border rounded-card p-3 shadow-lg z-50 flex flex-col gap-2">
+                <a href="index" class="p-2 text-text">Accueil</a>
+                <a href="activities" class="p-2 text-text" >Activités</a>
+                <a href="activitiesDetails" class="p-2 text-text" aria-current="page">Activités Details</a>
+                <a href="faq" class="p-2 text-text">FAQ</a>
+                <a href="reserve" class="bg-primary text-surface p-3 rounded-button text-center">Réserver</a>
+            </div>
+        </details>
+        <div class="hidden lg:flex items-center gap-8">
+            <a href="index" class="text-text hover:text-primary">Accueil</a>
+            <a href="activities" class="text-text hover:text-primary">Activités</a>
+            <a href="activitiesDetails" class="text-text hover:text-primary" aria-current="page">Activités Details</a>
+            <a href="faq" class="text-text hover:text-primary">FAQ</a>
+        </div>
+        <a href="reserve" class="hidden lg:block bg-primary text-surface  px-6 py-3 rounded-button hover:bg-primary-hover" aria-current="page"> Réserver</a>
+    </nav>
+</header>
     <main>
         <!-- form + card section -->
         <section class="h-auto p-8 bg-bg flex flex-col gap-9 lg:p-[7%]">
@@ -20,53 +48,75 @@
                 <h2 class="text-text-muted">Sur l’eau, dans le Rif ou autour d’une table : découvrez Marchica à votre rythme.</h2>
             </div>
             <div class="flex flex-col gap-x-8 md:flex-row">
-                <form class="flex flex-col gap-4 w-full h-full bg-white rounded-card p-7 border border-gray-600" action="" method="post">
+                <form class="flex flex-col gap-4 w-full h-full bg-white rounded-card p-7 border border-gray-600" action="https://formsubmit.co/ahmedtalbi459@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nouvelle demande - Marchica Trips">
+                    <input type="hidden" name="_template" value="table">
+
                     <div class="flex flex-col gap-2">
                         <legend class="text-4xl font-bold font-display">Votre activite</legend>
                         <p class="text-text-muted">Les champs marqués d’un * sont obligatoires.</p>
                     </div>
+
                     <label class="text-xl" for="activite">Activite *</label>
-                    <select class="w-full p-3 border border-gray-800 rounded-button" name="activite" id="">
+                    <select class="w-full p-3 border border-gray-800 rounded-button" name="activite" id="activite" required>
                         <option value="kayak">kayak</option>
                         <option value="free divintg">free divintg</option>
                         <option value="jetski">jetski</option>
                     </select>
+
                     <div class="flex flex-col gap-4 md:flex-row">
                         <div class="w-full flex flex-col gap-1">
                             <label class="text-xl" for="date">Date souhaitée *</label>
-                            <input class="w-full p-3 border border-gray-800 rounded-button" placeholder="jj / mm / aaaa" type="datetime" name="date" id="">
+                            <input class="w-full p-3 border border-gray-800 rounded-button" type="date" name="date" id="date" required>
                             <p class="text-text-muted">Selon disponibilités.</p>
                         </div>
                         <div class="w-full flex flex-col gap-1">
-                            <label class="text-xl" for="date">Participants *</label>
-                            <input class="w-full p-3 border border-gray-800 rounded-button" placeholder="2" type="datetime" name="date" id="">
+                            <label class="text-xl" for="participants">Participants *</label>
+                            <input class="w-full p-3 border border-gray-800 rounded-button" placeholder="2" type="number" name="participants" id="participants" min="1" max="20" step="1" required>
                             <p class="text-text-muted">Au moins 1 participant.</p>
                         </div>
                     </div>
+
                     <legend class="text-4xl font-bold font-display">Vos coordonnées</legend>
-                    <label class="text-xl" for="">Nom complet *</label>
-                    <input class="w-full p-3 border border-gray-800 rounded-button" name="nom" placeholder="Votre prénom et votre nom" type="text">
+
+                    <label class="text-xl" for="nom">Nom complet *</label>
+                    <input class="w-full p-3 border border-gray-800 rounded-button"
+                        placeholder="Votre prénom et votre nom" type="text" name="nom" id="nom" minlength="3"
+                        maxlength="60" pattern="[A-Za-z' \-]{3,60}"
+                        title="Lettres uniquement (3 à 60 caractères)" required>
+
                     <div class="w-full flex flex-col gap-1">
                         <label class="text-xl" for="email">Adresse e-mail *</label>
-                        <input class="w-full p-3 border border-gray-800 rounded-button" placeholder="vous@exemple.com" type="datetime" name="email" id="">
+                        <input class="w-full p-3 border border-gray-800 rounded-button" placeholder="vous@exemple.com"
+                            type="email" name="email" id="email" maxlength="100" pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}"
+                            title="Entrez une adresse e-mail valide" required>
                         <p class="text-text-muted">Nous vous répondrons à cette adresse.</p>
                     </div>
+
                     <div class="w-full flex flex-col gap-1">
                         <label class="text-xl" for="telephone">Téléphone *</label>
-                        <input class="w-full p-3 border border-gray-800 rounded-button" placeholder="+212 …" type="datetime" name="telephone" id="">
+                        <input class="w-full p-3 border border-gray-800 rounded-button" placeholder="+212 …" type="tel"
+                            name="telephone" id="telephone" minlength="8" maxlength="20" pattern="\+?[0-9 ]{8,20}"
+                            title="Chiffres uniquement, avec indicatif si possible (ex : +212 600 000 000)" required>
                         <p class="text-text-muted">Ajoutez l’indicatif de votre pays.</p>
                     </div>
+
                     <div class="w-full flex flex-col gap-1">
                         <label class="text-xl" for="message">Un message ? (facultatif)</label>
-                        <textarea class="w-full p-3 border border-gray-800 rounded-button resize-none" name="message" placeholder="Une question ou un besoin particulier pour votre sortie ?" id="" rows="4"></textarea>
+                        <textarea class="w-full p-3 border border-gray-800 rounded-button resize-none" name="message"
+                            id="message" placeholder="Une question ou un besoin particulier pour votre sortie ?"
+                            rows="4" maxlength="500"></textarea>
                     </div>
+
                     <p class="text-text-muted">Vos coordonnées servent à traiter votre demande.</p>
-                    <button class="bg-primary p-4 w-full text-bg font-sans font-medium rounded-button hover:bg-sky-700 hover:cursor-pointer transition-colors duration-200 ease-in-out lg:w-[30%]">Envoyer ma demande</button>
+                    <button type="submit"
+                        class="bg-primary p-4 w-full text-bg font-sans font-medium rounded-button hover:bg-sky-700 hover:cursor-pointer transition-colors duration-200 ease-in-out lg:w-[30%]">Envoyer
+                        ma demande</button>
                     <p class="text-text-muted">La demande ne confirme pas la réservation.</p>
                 </form>
-                <div class="w-[40%] h-auto my-7 p-7 rounded-card flex flex-col gap-3.5 bg-blue-400 md:h-[50%] md:my-0">
+                <div class="w-full h-auto my-7 p-7 rounded-card flex flex-col gap-3.5 bg-blue-400 md:h-[50%] md:my-0">
                     <h1 class="text-5xl font-display">On prépare <br> votre échappée ?</h1>
-                    <img class="rounded-card w-full" src="./assets/kayak decouverte.webp" alt="">
+                    <img class="rounded-card w-full" src="./assets/kayak decouverte.webp" alt="kayak">
                     <hr class="border-gray-600">
                     <div class="flex w-full justify-between">
                         <p class="text-gray-600">À partir de</p>
@@ -78,6 +128,29 @@ text-gray-70000">Tarif indicatif. Le montant et la disponibilité seront confirm
             </div>
         </section>
     </main>
-    <footer></footer>
+        <footer>
+    <div class="bg-primary text-white justify-center align-text-bottom p-2 md:flex-row md:p-[5%]">
+      <div class="flex h-10px w-10px place-items-start  rounded-lg p-2  items-center space-x-2">
+        <img class="object-cover object-center rounded-full h-10 w-10 " src="logo.webp" alt="logo-machica-trips" />
+        <div>
+          <h2 class="text-2xl font-medium tracking-wide leading-10">marchica</h2>
+          <span class="text-[11px] tracking-[0.25em] text-emerald-100 uppercase block mt-1">TRIPS</span>
+        </div>
+
+      </div>
+
+      <div class="flex-1  rounded-lg p-4"> La lagune.Le Rif.Vous</div>
+      <div>
+        <ul class="flex  rounded-lg p-4 ">
+          <li><a href="activities">activities</a>.
+            <a href="reserve">Reservation</a>.
+          <li><a href="faq">FAQ</a></li>
+        </ul>
+      </div>
+      <hr>
+
+      <div class="opacity-80 rounded-lg p-2 ">© Marchica Trips.concept pedagogique</div>
+    </div>
+  </footer>
 </body>
 </html>
